@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BFHL Challenge</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>BFHL Challenge</h1>
+        <textarea id="jsonInput" placeholder='Enter JSON e.g. {"data": ["A","C","z"]}'></textarea>
+        <button onclick="submitData()">Submit</button>
+        <div id="response"></div>
+        <div id="filters">
+            <label><input type="checkbox" value="alphabets"> Alphabets</label>
+            <label><input type="checkbox" value="numbers"> Numbers</label>
+            <label><input type="checkbox" value="highest_lowercase_alphabet"> Highest Lowercase Alphabet</label>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
